@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ScienceSparks — Home</title>
+  <style>
+    :root{
+      --accent:#4b2bff;
+      --accent-dark:#003d80;
+      --bg1:#e9f4ff;
+      --card-shadow: 0 6px 20px rgba(13,25,40,0.08);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#dbeafe,#f0f4f8);color:#102a43;min-height:100vh;display:flex;flex-direction:column}
+    /* banner */
+    .banner{
+      height:220px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      font-weight:800;
+      font-size:34px;
+      letter-spacing:0.6px;
+      text-shadow:0 6px 18px rgba(0,0,0,0.25);
+      background:
+        linear-gradient(180deg,rgba(43,26,126,0.75),rgba(75,43,255,0.65)),
+        url('banner.png') center/cover no-repeat;
+    }
+    /* fallback if banner missing (some browsers show broken image but gradient still OK) */
+    .banner .subtitle{font-size:16px;font-weight:500;margin-top:8px;opacity:0.95}
+    nav{background:var(--accent-dark);padding:10px 12px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:20}
+    nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a:hover{background:rgba(255,255,255,0.06)}
+    .container{width:92%;max-width:1100px;margin:28px auto;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:#fff;padding:22px;border-radius:var(--radius);box-shadow:var(--card-shadow);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;justify-content:space-between}
+    .card:hover{transform:translateY(-8px);box-shadow:0 14px 36px rgba(13,25,40,0.12)}
+    .card h3{margin:0 0 10px;color:var(--accent)}
+    .card p{margin:0 0 16px;color:#334e68;line-height:1.45}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    footer{margin-top:auto;background:var(--accent-dark);color:#fff;padding:18px 12px;text-align:center}
+    /* responsive tweaks */
+    @media (max-width:480px){
+      .banner{font-size:22px;height:160px;padding:10px}
+      nav{padding:8px}
+      .card{padding:16px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="banner" role="banner">
+    <div>
+      ScienceSparks
+      <div class="subtitle">Explore • Learn • Discover — Science made fun for kids</div>
+    </div>
+  </header>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="experiments.html">Experiments</a>
+    <a href="facts.html">Facts</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="container" role="main">
+    <article class="card">
+      <div>
+        <h3>🧪 50 Experiments</h3>
+        <p>Hands-on, safe and easy experiments with clear steps and explanations — perfect for home or school.</p>
+      </div>
+      <a class="btn" href="experiments.html">Try Experiments</a>
+    </article>
+
+    <article class="card">
+      <div>
+        <h3>🌟 50 Science Facts</h3>
+        <p>Short, amazing science facts to spark curiosity and prompt questions.</p>
+      </div>
+      <a class="btn" href="facts.html">Read Facts</a>
+    </article>
+
+    <article class="card">
+      <div>
+        <h3>📩 Contact</h3>
+        <p>Have ideas or want to share your experiments? Reach out via email.</p>
+      </div>
+      <a class="btn" href="contact.html">Contact Me</a>
+    </article>
+  </main>
+
+  <footer>
+    © 2025 ScienceSparks — Built by Noman • All rights reserved
+  </footer>
+
+</body>
+</html>
